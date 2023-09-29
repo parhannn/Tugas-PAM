@@ -49,11 +49,10 @@ class SkillFragment : Fragment() {
         recyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
+        dataInitialize()
         adapter = MyAdapter(skillArrayList)
         recyclerView.adapter = adapter
         searchView = view.findViewById(R.id.search_action)
-
-        dataInitialize()
 
         adapter.onItemClick = {
             val intent = Intent(requireContext(), SkillDetail::class.java)
@@ -99,30 +98,28 @@ class SkillFragment : Fragment() {
 
         imageId = arrayOf(
             R.drawable.cpp_logo,
+            R.drawable.c_logo,
             R.drawable.py_logo,
             R.drawable.html_logo,
             R.drawable.css_logo,
             R.drawable.js_logo,
             R.drawable.sql_logo,
-            R.drawable.cpp_logo,
-            R.drawable.py_logo,
-            R.drawable.html_logo,
-            R.drawable.css_logo,
-            R.drawable.js_logo
+            R.drawable.kt_logo,
+            R.drawable.vsc_logo,
+            R.drawable.android_studio_logo
         )
 
         heading = arrayOf(
             getString(R.string.text_cpp),
+            getString(R.string.text_c),
             getString(R.string.text_py),
             getString(R.string.text_html),
             getString(R.string.text_css),
             getString(R.string.text_js),
             getString(R.string.text_sql),
-            getString(R.string.text_cpp),
-            getString(R.string.text_py),
-            getString(R.string.text_html),
-            getString(R.string.text_css),
-            getString(R.string.text_js)
+            getString(R.string.text_kt),
+            getString(R.string.text_vsc),
+            getString(R.string.text_android_studio)
         )
 
         getUserData()
