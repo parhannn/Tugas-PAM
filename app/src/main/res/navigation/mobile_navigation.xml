@@ -21,7 +21,22 @@
         android:id="@+id/nav_skill"
         android:name="com.example.app.ui.skill.SkillFragment"
         android:label="@string/menu_skill"
-        tools:layout="@layout/fragment_skill" />
+        tools:layout="@layout/fragment_skill">
+        <action
+            android:id="@+id/action_nav_skill_to_skill_detail"
+            app:destination="@id/nav_skill_detail"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_skill_detail"
+        android:name="com.example.app.ui.skill.SkillDetailFragment"
+        android:label="@string/menu_skill_detail"
+        tools:layout="@layout/fragment_skill_detail">
+        <argument
+            android:name="extra_name"
+            app:argType="string" />
+    </fragment>
+
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.example.app.ui.slideshow.SlideshowFragment"

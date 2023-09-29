@@ -1,6 +1,5 @@
 package com.example.app.ui.skill
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -8,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.app.R
@@ -55,9 +55,7 @@ class SkillFragment : Fragment() {
         searchView = view.findViewById(R.id.search_action)
 
         adapter.onItemClick = {
-            val intent = Intent(requireContext(), SkillDetail::class.java)
-            intent.putExtra("skill", it)
-            startActivity(intent)
+            navigateToDetail(it.heading)
         }
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -72,6 +70,15 @@ class SkillFragment : Fragment() {
 
         })
 
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        t1 = null
+    }
+
+    private fun navigateToDetail(extraName: String){
+        findNavController().navigate(SkillFragmentDirections.actionNavSkillToSkillDetail(extraName))
     }
 
     private fun filterList(query: String?) {

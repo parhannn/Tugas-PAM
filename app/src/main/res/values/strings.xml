@@ -13,6 +13,7 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_skill">Skills</string>
+    <string name="menu_skill_detail">Skill Detail</string>
 
     <string name="text_cpp">C++ Programming Language</string>
     <string name="text_c">C Programming Language</string>
