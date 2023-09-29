@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.app.R
 import com.google.android.material.imageview.ShapeableImageView
@@ -38,9 +39,11 @@ class MyAdapter(private var list: ArrayList<Skill>) : RecyclerView.Adapter<MyAda
     }
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-
-        val titleImage : ShapeableImageView = itemView.findViewById(R.id.imageView)
-        val tvHeading : TextView = itemView.findViewById(R.id.textView)
-
+        val titleImage : AppCompatImageView = itemView.findViewById(R.id.imageView)
+        // salah tipe class, harusnya AppCompatImageView, karna di xml buatnya itu
+        //val titleImage : ShapeableImageView = itemView.findViewById(R.id.imageView)
+        val tvHeading : TextView = itemView.findViewById(R.id.titleImage)
+        // salah id, harusnya titleImage, ini salah satu contoh kenapa pake view binding lebih ok dari findview by id
+        //val tvHeading : TextView = itemView.findViewById(R.id.textView)
     }
 }

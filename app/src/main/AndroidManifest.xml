@@ -23,6 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--kalau mau pakai activity, kurang deklarasi activiy-->
+        <activity
+            android:name=".ui.skill.SkillDetail"
+            android:exported="true"
+            android:label="@string/app_name"/>
     </application>
 
 </manifest>
