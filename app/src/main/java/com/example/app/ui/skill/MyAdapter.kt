@@ -9,9 +9,14 @@ import com.example.app.R
 import com.google.android.material.imageview.ShapeableImageView
 
 
-class MyAdapter(private val list: ArrayList<Skill>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapter(private var list: ArrayList<Skill>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     var onItemClick : ((Skill) -> Unit)? = null
+
+    fun setFilteredList(list: ArrayList<Skill>){
+        this.list = list
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item , parent , false)
