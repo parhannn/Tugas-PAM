@@ -49,11 +49,13 @@ class SkillFragment : Fragment() {
         recyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
+        // di initialize dulu sebelum dipanggil, pindah panggil fungsi datainitialize ke sebelum array di panggil, ini hasilnya masih null karna belum di initialize (lateinit)
+        dataInitialize()
         adapter = MyAdapter(skillArrayList)
         recyclerView.adapter = adapter
         searchView = view.findViewById(R.id.search_action)
 
-        dataInitialize()
+        //dataInitialize()
 
         adapter.onItemClick = {
             val intent = Intent(requireContext(), SkillDetail::class.java)
