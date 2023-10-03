@@ -15,6 +15,8 @@
     <string name="menu_skill">Skills</string>
     <string name="menu_skill_detail">Skill Detail</string>
 
+    <string name="default_string_item">Programming Language</string>
+
     <string name="text_cpp">C++ Programming Language</string>
     <string name="text_c">C Programming Language</string>
     <string name="text_py">Python Programming Language</string>
