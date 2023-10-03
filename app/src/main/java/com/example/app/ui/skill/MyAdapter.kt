@@ -7,7 +7,6 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.app.R
-import com.google.android.material.imageview.ShapeableImageView
 
 
 class MyAdapter(private var list: ArrayList<Skill>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
