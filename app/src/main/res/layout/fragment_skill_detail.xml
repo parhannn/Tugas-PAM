@@ -6,15 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ui.skill.SkillDetailFragment">
 
+    <!--detail content-->
     <TextView
         android:id="@+id/text_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="@dimen/detail_content_layout_marginStart"
+        android:layout_marginTop="@dimen/detail_content_layout_marginTop"
+        android:layout_marginEnd="@dimen/detail_content_layout_marginEnd"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="@dimen/detail_content_textSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

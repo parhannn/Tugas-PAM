@@ -6,18 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".ui.skill.SkillFragment">
 
+    <!--search bar constraint-->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/searchBar_layout_width"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="12dp"
+        app:cardCornerRadius="@dimen/searchBar_cardCornerRadius"
+        app:cardElevation="@dimen/searchBar_cardElevation"
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!--search bar-->
         <androidx.appcompat.widget.SearchView
             android:id="@+id/search_action"
             android:layout_width="match_parent"
@@ -28,10 +30,11 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+    <!--skill content-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/skill_content_layout_width"
+        android:layout_height="@dimen/skill_content_layout_height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

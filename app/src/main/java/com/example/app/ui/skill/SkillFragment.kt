@@ -1,5 +1,6 @@
 package com.example.app.ui.skill
 
+import android.content.res.TypedArray
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -26,7 +27,7 @@ class SkillFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var searchView: SearchView
     private lateinit var skillArrayList : ArrayList<Skill>
-    private lateinit var imageId : IntArray
+    private lateinit var imageId : TypedArray
     private lateinit var heading : Array<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -107,8 +108,8 @@ class SkillFragment : Fragment() {
 
     private fun getUserData() {
 
-        for (i in imageId.indices) {
-            val skill = Skill(imageId[i], heading[i])
+        for (i in 0..<imageId.length()) {
+            val skill = Skill(imageId.getResourceId(i,0), heading[i])
             skillArrayList.add(skill)
         }
 
@@ -116,26 +117,10 @@ class SkillFragment : Fragment() {
 
     private fun dataInitialize(){
         skillArrayList = arrayListOf<Skill>()
-
-//        imageId = arrayOf(
-//            R.drawable.cpp_logo,
-//            R.drawable.c_logo,
-//            R.drawable.py_logo,
-//            R.drawable.html_logo,
-//            R.drawable.css_logo,
-//            R.drawable.js_logo,
-//            R.drawable.sql_logo,
-//            R.drawable.kt_logo,
-//            R.drawable.vsc_logo,
-//            R.drawable.android_studio_logo
-//        )
-
-//        i can't use this yet
-        imageId = resources.getIntArray(R.array.integer_skill_array)
+        imageId = resources.obtainTypedArray(R.array.integer_skill_array)
         heading = resources.getStringArray(R.array.string_skill_array)
-
         getUserData()
-
+        imageId.recycle()
     }
 
 }

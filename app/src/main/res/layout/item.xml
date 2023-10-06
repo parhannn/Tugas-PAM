@@ -11,20 +11,21 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
+        android:padding="@dimen/item_card_padding"
         android:background="@color/item_card_color">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:cardCornerRadius="20dp"
+            android:layout_width="@dimen/item_card_width"
+            android:layout_height="@dimen/item_card_height"
+            app:cardCornerRadius="@dimen/item_card_cornerRadius"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/imageView"
+                android:contentDescription="@string/default_string_item"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/cpp_logo"
@@ -37,11 +38,11 @@
             android:layout_height="match_parent"
             android:text="@string/default_string_item"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="@dimen/item_textSize"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.632"
+            app:layout_constraintHorizontal_bias="0.640"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
