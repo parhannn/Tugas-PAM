@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">My Portfolio</string>
+    <string name="login_page">Login</string>
+    <string name="signup_page">Sign Up</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Farhan Apri Kesuma</string>
@@ -30,4 +32,11 @@
 
     <string name="appBar_main_contentDesc">This is message</string>
 
+    <string name="email_hint">Type your Email</string>
+    <string name="password_hint">Type your Password</string>
+    <string name="password_retype_hint">Retype your Password</string>
+    <string name="login_text">LOGIN</string>
+    <string name="signup_text">SIGN UP</string>
+    <string name="not_registered">Not Registered Yet? Sign Up, Please</string>
+    <string name="registered">Already Registered? Login, Please</string>
 </resources>

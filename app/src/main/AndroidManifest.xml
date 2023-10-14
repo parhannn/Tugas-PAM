@@ -12,18 +12,42 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App"
         tools:targetApi="31">
+
+        <!--splash-->
+        <activity
+            android:name=".Splash"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!--login-->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="@string/login_page"
+            android:theme="@style/Theme.App.NoActionBar">
+        </activity>
+
+        <!--signup (if not registered)-->
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false"
+            android:label="@string/signup_page"
+            android:theme="@style/Theme.App.NoActionBar"/>
+
+        <!--main page (after login)-->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.App.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        
+
+        <!--skill detail page-->
         <activity
             android:name=".ui.skill.SkillDetail"
             android:exported="true"

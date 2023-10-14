@@ -7,6 +7,7 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">200dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="logout_margin">90dp</dimen>
 
     <!--gallery fragment dimen-->
     <dimen name="gallery_layout_marginStart">8dp</dimen>
@@ -47,4 +48,34 @@
     <dimen name="item_card_height">50dp</dimen>
     <dimen name="item_card_cornerRadius">20dp</dimen>
     <dimen name="item_textSize">16sp</dimen>
+
+    <!--login dimen-->
+        <!--email login-->
+        <dimen name="email_login_marginHorizontal">16dp</dimen>
+        <dimen name="email_login_marginTop">350dp</dimen>
+
+        <!--password login-->
+        <dimen name="password_login_marginHorizontal">16dp</dimen>
+        <dimen name="password_login_marginTop">24dp</dimen>
+
+        <!--login button-->
+        <dimen name="login_button_width">0dp</dimen>
+        <dimen name="login_button_marginHorizontal">16dp</dimen>
+
+    <!--singUp dimen-->
+        <!--email login-->
+        <dimen name="email_signUp_marginHorizontal">16dp</dimen>
+        <dimen name="email_signUp_marginTop">300dp</dimen>
+
+        <!--password login-->
+        <dimen name="password_signUp_marginHorizontal">16dp</dimen>
+        <dimen name="password_signUp_marginTop">24dp</dimen>
+
+        <!--retype password-->
+        <dimen name="retype_password_marginHorizontal">16dp</dimen>
+        <dimen name="retype_password_marginTop">24dp</dimen>
+
+        <!--signUp button-->
+        <dimen name="signUp_button_width">0dp</dimen>
+        <dimen name="signUp_button_marginHorizontal">16dp</dimen>
 </resources>
